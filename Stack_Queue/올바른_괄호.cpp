@@ -3,7 +3,7 @@
 #include <stack>
 
 using namespace std;
-
+ 
 bool solution(string s)
 {
     bool answer = true;
