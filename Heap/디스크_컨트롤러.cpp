@@ -2,10 +2,10 @@
 #include <vector>
 #include <algorithm>
 #include <queue>
-
-//ÀÛ¾÷ÀÇ ¿äÃ»ºÎÅÍ Á¾·á±îÁö °É¸° ½Ã°£ÀÇ Æò±ÕÀ» °¡Àå ÁÙÀÏ ¼ö ÀÖ´Â ¹æ¹ýÀº, ¼Ò¿ä½Ã°£ÀÌ ÂªÀº°ÍºÎÅÍ Ã³¸®ÇÏ´Â °Í
-//jobsÀ» ¿äÃ» ½Ã°£À» ±âÁØÀ¸·Î ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÏ°í ¼Ò¿ä½Ã°£ ¿À¸§Â÷¼øÀ¸·Î ¿ì¼±¼øÀ§ Å¥¿¡ ³Ö¾îÁÖ¸é µÈ´Ù.
-//ÇÏ³ªÀÇ ÀÛ¾÷ ¿äÃ»ÀÌ ½ÇÇàÁßÀÏ ¶§ ±× ¿äÃ» ÀÌÈÄÀÇ ´ÙÀ½ ¿äÃ»ÀÇ ¿äÃ» ½ÃÁ¡À» È®ÀÎÇÏ°í ½ÇÇà ÁßÀÎ ¿äÃ»ÀÇ ÀÛ¾÷ ¼Ò¿ä ½Ã°£ º¸´Ù ÀÌÀü¿¡ ÀÖ´Â °æ¿ì ¿ì¼±¼øÀ§ Å¥¿¡ ³Ö¾îÁÖ¾î ´ë±âÇÏ°Ô ÇÏ´Â ¿ø¸® 
+ 
+//ìž‘ì—…ì˜ ìš”ì²­ë¶€í„° ì¢…ë£Œê¹Œì§€ ê±¸ë¦° ì‹œê°„ì˜ í‰ê· ì„ ê°€ìž¥ ì¤„ì¼ ìˆ˜ ìžˆëŠ” ë°©ë²•ì€, ì†Œìš”ì‹œê°„ì´ ì§§ì€ê²ƒë¶€í„° ì²˜ë¦¬í•˜ëŠ” ê²ƒ
+//jobsì„ ìš”ì²­ ì‹œê°„ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•˜ê³  ì†Œìš”ì‹œê°„ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ìš°ì„ ìˆœìœ„ íì— ë„£ì–´ì£¼ë©´ ëœë‹¤.
+//í•˜ë‚˜ì˜ ìž‘ì—… ìš”ì²­ì´ ì‹¤í–‰ì¤‘ì¼ ë•Œ ê·¸ ìš”ì²­ ì´í›„ì˜ ë‹¤ìŒ ìš”ì²­ì˜ ìš”ì²­ ì‹œì ì„ í™•ì¸í•˜ê³  ì‹¤í–‰ ì¤‘ì¸ ìš”ì²­ì˜ ìž‘ì—… ì†Œìš” ì‹œê°„ ë³´ë‹¤ ì´ì „ì— ìžˆëŠ” ê²½ìš° ìš°ì„ ìˆœìœ„ íì— ë„£ì–´ì£¼ì–´ ëŒ€ê¸°í•˜ê²Œ í•˜ëŠ” ì›ë¦¬ 
 
 
 using namespace std;
@@ -16,7 +16,7 @@ bool compare1(const vector<int>& a, const vector<int>& b) {
 
 struct compare2 {
     bool operator()(vector<int>& a, vector<int>& b) {
-        return a[1] > b[1]; // Á¤·Ä ±âÁØÀÌ Ã¹¹øÂ° ÀÎÀÚ°¡ ¾Æ´Ñ µÎ¹øÂ° ÀÎÀÚ ±âÁØÀÓ. µû¶ó¼­ ¿À¸§Â÷¼ø Á¤·ÄÀÓ.
+        return a[1] > b[1]; // ì •ë ¬ ê¸°ì¤€ì´ ì²«ë²ˆì§¸ ì¸ìžê°€ ì•„ë‹Œ ë‘ë²ˆì§¸ ì¸ìž ê¸°ì¤€ìž„. ë”°ë¼ì„œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ìž„.
     }
 };
 
@@ -35,7 +35,7 @@ int solution(vector<vector<int>> jobs) {
 
 
         if (jobs_cnt < jobs.size() && time_cnt >= jobs[jobs_cnt][0]) {
-            //&&¿¬»êÀÚÀÇ ÇÇ¿¬»êÀÚ 2°³ÀÇ ¼ø¼­ ÁÖÀÇ time_cnt>=jobs[jobs_cnt][0]¸¦ ¸ÕÀú Àû°Ô µÇ¸é º¤ÅÍ ¹üÀ§¸¦ ¹þ¾î³²
+            //&&ì—°ì‚°ìžì˜ í”¼ì—°ì‚°ìž 2ê°œì˜ ìˆœì„œ ì£¼ì˜ time_cnt>=jobs[jobs_cnt][0]ë¥¼ ë¨¼ì € ì ê²Œ ë˜ë©´ ë²¡í„° ë²”ìœ„ë¥¼ ë²—ì–´ë‚¨
             pq.push(jobs[jobs_cnt]);
             jobs_cnt++;
             continue;
@@ -47,8 +47,8 @@ int solution(vector<vector<int>> jobs) {
             pq.pop();
         }
         else {
-            // ´ë±âÁßÀÎ ÀÛ¾÷ÀÌ ¾øÀ¸¸é ´ÙÀ½ ¼ø¼­ÀÇ ÀÛ¾÷À» ¹Ù·Î ½ÇÇàÇÒ ¼ö ÀÖ´Â »óÅÂÀÌ¹Ç·Î ÇöÀç ½Ã°£À» ÇØ´ç ÀÛ¾÷ÀÇ ½ÃÀÛ ½ÃÁ¡À¸·Î ¹Ù²Û´Ù.
-            // ¿¹: ÇöÀç½Ã°£ÀÌ 3ÀÌ¶ó°í °¡Á¤ÇÒ¶§ ´ÙÀ½ ¿äÃ»ÀÌ [5,9]ÀÎ °æ¿ì ÇöÀç½Ã°£À» ÇØ´ç ¿äÃ»ÀÇ ¼öÇà½ÃÁ¡À¸·Î ¹Ù²Ù°í while¹®À» ´Ù½Ã ½ÇÇà½ÃÄÑ¾ßÇÔ
+            // ëŒ€ê¸°ì¤‘ì¸ ìž‘ì—…ì´ ì—†ìœ¼ë©´ ë‹¤ìŒ ìˆœì„œì˜ ìž‘ì—…ì„ ë°”ë¡œ ì‹¤í–‰í•  ìˆ˜ ìžˆëŠ” ìƒíƒœì´ë¯€ë¡œ í˜„ìž¬ ì‹œê°„ì„ í•´ë‹¹ ìž‘ì—…ì˜ ì‹œìž‘ ì‹œì ìœ¼ë¡œ ë°”ê¾¼ë‹¤.
+            // ì˜ˆ: í˜„ìž¬ì‹œê°„ì´ 3ì´ë¼ê³  ê°€ì •í• ë•Œ ë‹¤ìŒ ìš”ì²­ì´ [5,9]ì¸ ê²½ìš° í˜„ìž¬ì‹œê°„ì„ í•´ë‹¹ ìš”ì²­ì˜ ìˆ˜í–‰ì‹œì ìœ¼ë¡œ ë°”ê¾¸ê³  whileë¬¸ì„ ë‹¤ì‹œ ì‹¤í–‰ì‹œì¼œì•¼í•¨
             time_cnt = jobs[jobs_cnt][0];
         }
 
@@ -62,7 +62,7 @@ int solution(vector<vector<int>> jobs) {
 
 
 
-//À¯¿ëÇÑ µµ±¸
+//ìœ ìš©í•œ ë„êµ¬
 /*
 for (const auto& inner_vec : jobs) {
     for (int value : inner_vec) {
