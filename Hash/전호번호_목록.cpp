@@ -5,7 +5,7 @@
 #include <unordered_set>
 
 using namespace std;
-
+ 
 bool solution(vector<string> phone_book) {
     unordered_set<string> hash_map;
     sort(phone_book.begin(), phone_book.end());
