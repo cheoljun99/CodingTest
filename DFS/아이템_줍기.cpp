@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int area[100][100] = { 0 };
+int area[101][101] = { 0 };
 int dx[4] = { 1,0,-1,0 };
 int dy[4] = { 0,1,0,-1 };
 int cnt_min_step = 999999999;
@@ -22,9 +22,9 @@ void dfs(int characterX, int characterY, int itemX, int itemY, int step) {
         int x = characterX + dx[i];
         int y = characterY + dy[i];
         if (area[x][y] == 1) {
-            area[x][y] = 0;
+            area[x][y] = 0;// 현재 위치를 재 방문하는 경우를 방지
             dfs(x, y, itemX, itemY, step + 1);
-            area[x][y] = 1;
+            area[x][y] = 1;// 현재 분기를 다 탐색한경우 새로운 분기 탐색을 위해 백트래킹을 적용
         }
     }
     return;
