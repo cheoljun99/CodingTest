@@ -76,7 +76,7 @@ int main() {
 	cout.tie(NULL);
 
 	cin >> N;
-	cin.ignore();//°іЗа Б¦°Е
+	cin.ignore();//лІ„нЌјм—ђм„њ к°њн–‰ м њк±°
 
 	for (int i = 0; i < N; i++) {
 		getline(cin,s);
