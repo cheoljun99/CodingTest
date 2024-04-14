@@ -7,7 +7,7 @@ using namespace std;
 string s;
 char table[8][8];
 
-const int dxy[][2] = { {-1,0},{1,0},{0,-1},{0,1},{-1,-1},{-1,1},{1,-1},{1,1},{0,0} };
+const int dxy[][2] = { {-1,0},{1,0},{0,-1},{0,1},{-1,-1},{-1,1},{1,-1},{1,1},{0,0} };// 기억할 것.
 
 struct pos {
 	int time;// 이동지점에서의 현재시간
@@ -50,7 +50,6 @@ int bfs() {
 	return 0;
 }
 
-
 int main() {
 
 
@@ -60,9 +59,6 @@ int main() {
 			table[i][j] = s[j];
 		}
 	}
-
-
-	
 	cout << bfs() << endl;;
 
 
