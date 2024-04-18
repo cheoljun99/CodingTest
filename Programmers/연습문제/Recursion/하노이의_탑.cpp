@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-//Àç±Í
+//ìž¬ê·€
 void hanoi(int n, int departure, int transit, int arrival, vector<vector<int>>& answer) {
     if (n == 1) {
         answer.push_back({ departure,arrival });
