@@ -48,7 +48,7 @@ int solution(int n, vector<vector<int>> wires) {
         int left = bfs(v1, v2);
         int right = n - left;
         if (answer == -1) {
-            answer = abs(left - right);//절대값 **
+            answer = abs(left - right);//절대값
         }
         answer = min(answer, abs(left - right));
     }
