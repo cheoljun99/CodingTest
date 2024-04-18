@@ -1,4 +1,4 @@
-#include <string>
+ï»¿#include <string>
 #include <vector>
 #include <queue>
 #include <cmath>
@@ -48,7 +48,7 @@ int solution(int n, vector<vector<int>> wires) {
         int left = bfs(v1, v2);
         int right = n - left;
         if (answer == -1) {
-            answer = abs(left - right);//Àý´ë°ª **
+            answer = abs(left - right);//ì ˆëŒ€ê°’ **
         }
         answer = min(answer, abs(left - right));
     }
