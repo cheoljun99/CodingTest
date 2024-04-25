@@ -6,7 +6,7 @@ int main() {
 
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	//{³ôÀÌ, À§Ä¡}
+	//{ë†’ì´, ìœ„ì¹˜}
 	stack<pair<int, int>> st;
 
 	st.push({ 1000000001,0 });
