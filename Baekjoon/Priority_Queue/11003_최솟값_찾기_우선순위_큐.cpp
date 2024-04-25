@@ -9,7 +9,7 @@ int main() {
 	int N, L;
 
 	cin >> N >> L;
-	//{ÀÎµ¦½º, °ª} ÇÑ±Û ±úÁü È®ÀÎ
+	//{ì¸ë±ìŠ¤, ê°’} í•œê¸€ ê¹¨ì§ í™•ì¸
 	priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
 	for (int i = 1; i <= N; i++) {
 		int num;
