@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	//½ºÅÃÇÏ³ª ¼±¾ğ
+	//ìŠ¤íƒí•˜ë‚˜ ì„ ì–¸
 	stack<int> st;
 
 	int play = 0;

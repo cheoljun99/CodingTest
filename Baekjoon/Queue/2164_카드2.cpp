@@ -7,7 +7,7 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	//{í•œê¸€, í•œê¸€} í•œê¸€ê¹¨ì§€ëŠ”ì§€ í…ŒìŠ¤íŠ¸
+	//{ÇÑ±Û, ÇÑ±Û} ÇÑ±Û±úÁö´ÂÁö Å×½ºÆ®
 
 	queue<int> q;
 
@@ -15,13 +15,20 @@ int main() {
 	cin >> N;
 
 	for (int i = 1; i <= N; i++) {
-		st.push(i);
+		q.push(i);
 	}
-	while (!q.empty()) {
-		q.pop();
-		if (q.empty()) return 0;
+	while (1) {
 		int cur = q.front();
-		q.push(cur);
+		q.pop();
+		if (q.empty()) {
+			cout << cur;
+			return 0;
+		}
+		else {
+			int back = q.front();
+			q.push(back);
+			q.pop();
+		}
 	}
 
 }
