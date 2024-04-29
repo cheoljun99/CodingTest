@@ -2,33 +2,33 @@
 
 using namespace std;
 
-int recursive(int A, int B,int C) {
-
-	if (B == 0) {
-		return A % C;
-	}
-
-	int twice=recursive(A, B / 2, C);
-
-	if (B % 2 == 1) {
-		return (twice*twice*A) % c;
-	}
-
-	else {
-		return (twice * twice) % c;
-	}
-
-
-}
-
 int main() {
 
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int A,B,C;
-	cin >> A>>B>>C;
+	int T;
+	cin >> T;
 
-	cout << recursive(A, B, C);
 
+
+	while (T--) {
+		stack<char>st;
+		string str;
+		cin >> str;
+		bool no_check = false;
+		for (int i = 0; i < str.size(); i++) {
+			if (str[i] == '(') st.push(str[i]);
+			else {//str[i] == ')'
+				if (st.empty()) {
+					no_check = true;
+					continue;
+				}
+				st.pop();
+			}
+		}
+		if (no_check) { cout << "NO" << '\n'; continue; }
+		if (!st.empty()) { cout << "NO" << '\n'; continue; }
+		cout << "YES" << '\n';
+	}
 }
