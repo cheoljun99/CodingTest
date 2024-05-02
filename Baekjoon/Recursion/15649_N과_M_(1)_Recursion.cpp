@@ -6,7 +6,7 @@ int N, M;
 int arr[8];
 bool used[8];
 
-void backtracking(int k) {
+void recursion(int k) {
 	
 	if (k == M) {
 		for (int i = 0; i < M; i++) {
@@ -19,7 +19,7 @@ void backtracking(int k) {
 		if (!used[i]) {
 			arr[k] = i;
 			used[i] = 1;
-			backtracking(k + 1);
+			recursion(k + 1);
 			used[i] = 0;
 		}
 	}
@@ -32,5 +32,5 @@ int main() {
 
 	cin >> N >> M;
 
-	backtracking(0);
+	recursion(0);
 }
