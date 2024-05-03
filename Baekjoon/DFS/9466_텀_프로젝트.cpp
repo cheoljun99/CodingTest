@@ -1,4 +1,4 @@
-/*function call È½¼ö ÁÙÀÌÀÚ vector ¼±¾ğÀº ÃÖ¼ÒÇÑ¸¸ ¿¬¼ÓµÈ for¹®°£ vector ¼±¾ğ È½¼ö ÃÖ´ëÇÑ Àû°Ô ÀÌÁß vector »ç¿ë ÃÖ´ëÇÑ ÀÚÁ¦*/
+/*function call íšŸìˆ˜ ì¤„ì´ì vector ì„ ì–¸ì€ ìµœì†Œí•œë§Œ ì—°ì†ëœ forë¬¸ê°„ vector ì„ ì–¸ íšŸìˆ˜ ìµœëŒ€í•œ ì ê²Œ ì´ì¤‘ vector ì‚¬ìš© ìµœëŒ€í•œ ìì œ*/
 
 
 #include <iostream>
@@ -17,30 +17,30 @@ int team_number = 0;
 
 
 void dfs(int cur_student) {
-	check_table[cur_student] = true;// ¹æ¹®ÇÑ°÷ Ç¥½Ã
-	int next_student = student_table[cur_student]; // ´ÙÀ½ ¹æ¹®´ë»ó
+	check_table[cur_student] = true;// ë°©ë¬¸í•œê³³ í‘œì‹œ
+	int next_student = student_table[cur_student]; // ë‹¤ìŒ ë°©ë¬¸ëŒ€ìƒ
 
 	if (!check_table[next_student]) {
-		//´ÙÀ½ ¹æ¹®´ë»óÀÌ ¹æ¹®ÇÑ°÷ÀÌ ¾Æ´Ò°æ¿ì.
+		//ë‹¤ìŒ ë°©ë¬¸ëŒ€ìƒì´ ë°©ë¬¸í•œê³³ì´ ì•„ë‹ê²½ìš°.
 
-		dfs(next_student);// ±íÀÌÅ½»ö
+		dfs(next_student);// ê¹Šì´íƒìƒ‰
 	}
 	else if (!team_table[next_student]) {
-		//±í°Ô Å½»öÇÏ´Ù°¡ ´ÙÀ½ ¹æ¹®´ë»óÀÌ ¹æ¹®ÇÑ °÷ÀÌ¸é(»çÀÌÅ¬ Çü¼º) ±×¶§ ±× °÷ÀÌ »çÀÌÅ¬ Çü¼ºÇß´Ù´Â °É °ú°Å¿¡ Ã¼Å©¸¦ ¾ÈÇÑ °æ¿ìÀÌ¸é
-		//ÆÀ¿ø Ãß°¡ÇØ¾ßÇÔ  
+		//ê¹Šê²Œ íƒìƒ‰í•˜ë‹¤ê°€ ë‹¤ìŒ ë°©ë¬¸ëŒ€ìƒì´ ë°©ë¬¸í•œ ê³³ì´ë©´(ì‚¬ì´í´ í˜•ì„±) ê·¸ë•Œ ê·¸ ê³³ì´ ì‚¬ì´í´ í˜•ì„±í–ˆë‹¤ëŠ” ê±¸ ê³¼ê±°ì— ì²´í¬ë¥¼ ì•ˆí•œ ê²½ìš°ì´ë©´
+		//íŒ€ì› ì¶”ê°€í•´ì•¼í•¨  
 		// 
 		//
-		//¹æ¹®Àº ÇßÁö¸¸ ¾ÆÁ÷ »çÀÌÅ¬ÀÌ ¾Æ´Ï¶ó¸é next±îÁö Æ÷ÇÔÇØ¼­ »çÀÌÅ¬ ¿Ï¼º
-		//ÀÚ±â ÀÚ½ÅÀ» Æ÷ÇÔÇÑ ÆÀÀÇ ¸â¹ö¸¦ Ä«¿îÆ®
+		//ë°©ë¬¸ì€ í–ˆì§€ë§Œ ì•„ì§ ì‚¬ì´í´ì´ ì•„ë‹ˆë¼ë©´ nextê¹Œì§€ í¬í•¨í•´ì„œ ì‚¬ì´í´ ì™„ì„±
+		//ìê¸° ìì‹ ì„ í¬í•¨í•œ íŒ€ì˜ ë©¤ë²„ë¥¼ ì¹´ìš´íŠ¸
 
 		for (int i = next_student; i != cur_student; i = student_table[i]) {
-			//ÆÀ¿ø Ãß°¡
+			//íŒ€ì› ì¶”ê°€
 			team_number++;
 		}
-		team_number++;// ÀÚ±â ÀÚ½Å Ãß°¡
+		team_number++;// ìê¸° ìì‹  ì¶”ê°€
 	}
-	team_table[cur_student] = true;//ÆÀ¿ø °á¼º
-	
+	team_table[cur_student] = true;//íŒ€ì› ê²°ì„±
+
 }
 
 int main() {
@@ -52,37 +52,37 @@ int main() {
 	int input_number = 0;
 	cin >> input_number;
 
-	while(input_number--) {
+	while (input_number--) {
 		team_number = 0;
-		int student_number=0;
-		cin>> student_number;
-		
+		int student_number = 0;
+		cin >> student_number;
+
 		for (int j = 0; j < student_number; j++) {
-			int select_number=0;
-			cin>>select_number;
-			student_table[j] = select_number-1;
+			int select_number = 0;
+			cin >> select_number;
+			student_table[j] = select_number - 1;
 			team_table[j] = false;
 			check_table[j] = false;
 		}
 		for (int i = 0; i < student_number; i++) {
 			if (!check_table[i]) {
-				dfs(i);	
+				dfs(i);
 			}
 		}
-		cout << student_number-team_number << endl;
+		cout << student_number - team_number << endl;
 	}
 }
 
 /*
-* 
-*½Ã°£ ÃÊ°ú ÄÚµå
-* 
-* ÀÌÀ¯:
-* 
-* dfs È£ÃâÀÌ »ó´ëÀûÀ¸·Î ´õ ¸¹Àºµ¥
-* ÆÀÀ» °á¼ºÇÏÁö ¸øÇÑ ´ë»ó¸¸ Å½»öÀ» ÇÏ±ä ÇÏÁö¸¸ Å½»öÇÏ´Â ±íÀÌ¿¡¼­ Á¾·á Á¶°ÇÀÌ ÇØ´ç ÄÚµå´Â ¿ÏÀü Å½»ö ÈÄ »çÀÌÅ¬À» Çü¼ºÇÏ´ÂÁö È®ÀÎÇÏ´Ù. ¶§¹®¿¡ ¿ÏÀüÅ½»öºÎºĞÀÌ ÀÖ±â ¶§¹®¿¡ ½Ã°£ÀÌ ¿À·¡°É¸².
-* 
-* 
+*
+*ì‹œê°„ ì´ˆê³¼ ì½”ë“œ
+*
+* ì´ìœ :
+*
+* dfs í˜¸ì¶œì´ ìƒëŒ€ì ìœ¼ë¡œ ë” ë§ì€ë°
+* íŒ€ì„ ê²°ì„±í•˜ì§€ ëª»í•œ ëŒ€ìƒë§Œ íƒìƒ‰ì„ í•˜ê¸´ í•˜ì§€ë§Œ íƒìƒ‰í•˜ëŠ” ê¹Šì´ì—ì„œ ì¢…ë£Œ ì¡°ê±´ì´ í•´ë‹¹ ì½”ë“œëŠ” ì™„ì „ íƒìƒ‰ í›„ ì‚¬ì´í´ì„ í˜•ì„±í•˜ëŠ”ì§€ í™•ì¸í•˜ë‹¤. ë•Œë¬¸ì— ì™„ì „íƒìƒ‰ë¶€ë¶„ì´ ìˆê¸° ë•Œë¬¸ì— ì‹œê°„ì´ ì˜¤ë˜ê±¸ë¦¼.
+*
+*
 #include <iostream>
 #include <cstring>
 
