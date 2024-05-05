@@ -4,8 +4,8 @@ using namespace std;
 int N, M;
 
 int arr[8];
-void backtracking(int idx) {
-	if (idx == M) {
+void backtracking(int idx, int depth) {
+	if (depth == M) {
 		for (int i = 0; i < M; i++) {
 			cout << arr[i] << " ";
 		}
@@ -13,9 +13,9 @@ void backtracking(int idx) {
 		return;
 	}
 
-	for (int i = 1; i <= N; i++) {
-		arr[idx] = i;
-		backtracking(idx + 1);
+	for (int i = idx; i <= N; i++) {
+		arr[depth] = i;
+		backtracking(i, depth + 1);
 	}
 }
 
@@ -25,6 +25,6 @@ int main() {
 	cin.tie(0);
 
 	cin >> N >> M;
-	backtracking(0);
+	backtracking(1, 0);
 
 }
