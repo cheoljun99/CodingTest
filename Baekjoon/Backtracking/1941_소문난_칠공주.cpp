@@ -16,9 +16,8 @@ int main() {
 	for (int i = 0; i < 5; i++)
 		cin >> board[i];
 
-	fill(com_mask + 7, com_mask + 25, true); //25명중 7명을 뽑아 칠공주가 될 후보 조합을 선택 25C7
-	
-	
+	fill(com_mask + 7, com_mask + 25, true); //25명중 7명을 뽑아 칠공주가 될 후보 조합을 선택 25C7 = 480,700의 경우의 수가 있음 3억번이 1초라면 충분히 가능
+
 	do {
 		queue<pair<int, int>>q;// x,y
 		int dasom_num = 0, adj_num = 0;// 다솜수와 인접한 사람수이며 다솜수는 4이상이여야하고 인접수는 7이어야한다.
@@ -46,15 +45,12 @@ int main() {
 				int ny = y + dy[i];
 				if (nx < 0 || nx >= 5 || ny < 0 || ny >= 5 || visited[nx][ny] || !somoon7[nx][ny])
 					continue;
-				q.push({nx,ny});
-				visited[nx][ny]=true;
+				q.push({ nx,ny });
+				visited[nx][ny] = true;
 			}
 		}
 		if (adj_num == 7 && dasom_num >= 4)
 			ans++;
 	} while (next_permutation(com_mask, com_mask + 25));
-	
-
 	cout << ans;
-
 }
