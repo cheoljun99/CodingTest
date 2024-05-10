@@ -6,8 +6,8 @@ int L, C;
 
 char ans[15];
 char chr[15];
-//con_num == ÀÚÀ½ °³¼ö
-//vow_num == ¸ğÀ½ °³¼ö
+//con_num == ììŒ ê°œìˆ˜
+//vow_num == ëª¨ìŒ ê°œìˆ˜
 
 void backtracking(int idx, int con_num, int vow_num,int cnt) {
 	if (idx == C) {

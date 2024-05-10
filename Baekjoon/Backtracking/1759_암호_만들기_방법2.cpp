@@ -15,8 +15,8 @@ int main() {
 	for (int i = L; i < C; i++) assi[i] = 1;
 	do {
 		string ans;
-		int con_num = 0;//ÀÚÀ½ °³¼ö
-		int vow_num = 0;//¸ðÀ½ °³¼ö
+		int con_num = 0;//ìžìŒ ê°œìˆ˜
+		int vow_num = 0;//ëª¨ìŒ ê°œìˆ˜
 		for (int i = 0; i < C; i++) {
 			if (assi[i] == 0) {
 				ans += chr[i];
