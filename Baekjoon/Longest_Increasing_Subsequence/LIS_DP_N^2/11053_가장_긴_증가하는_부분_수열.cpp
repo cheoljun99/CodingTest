@@ -10,7 +10,7 @@ int main() {
 	int N;
 	cin >> N;
 	vector<int> vec(N);
-	vector<int> DP(N);//Dynamic Programing O(N*N)
+	vector<vector<int>> DP(N);//Dynamic Programing O(N*N)
 
 	for (int i = 0; i < N; i++) {
 		cin >> vec[i]; 
