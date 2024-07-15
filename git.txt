@@ -1,0 +1,64 @@
+깃 허브에 파일 올리기
+
+% git add .
+% git commit -m "메세지"
+% git push origin master
+% git remote -v
+
+Git local branch 생성 , branch 이동
+생성 :
+git branch [브랜치명]
+
+생성 후 이동 :
+git checkout -b feature-01
+git switch -t origin/[원격브랜치명]
+
+ - 원격 브랜치와 같은 이름으로 로컬 브랜치를 생성하고 스위치 할 수 있다.
+
+Git remote branch 생성
+git push origin feature-01
+
+branch local remote 연동
+git branch --set-upstream-to origin/feature-01
+
+
+매우 간단하다!
+git pull 명령어가 안되는 사람은 "git pull origin master" 명령어를 입력해보자!
+git pull origin master = git pull [원격 저장소의 이름] [원격 저장소에서 받아오고자 하는 브랜치의 이름]
+
++ git pull로 원격 저장소의 코드를 가져올 때에도 Already up to date 문구가 뜰 때가 있는데,
+
+$ git fetch --all
+$ git reset --hard origin/master
+
+git remote add origin "깃허브 주소"
+
+git push -u origin +master 푸시안될때
+
+git pull origin (branchname) --allow-unrelated-histories 깃 푸시전 pull안될때
+
+git checkout -b [생성할 브랜치 명] [원격 브랜치 명]
+하지만, 다음과 같이 -b 명령어를 넣어줘서 원격 브랜치의 내용을 가져올 로컬 브랜치의 이름을 원하는 이름으로 설정해 줄 수 있습니다.
+
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch klas_client/.env' --prune-empty --tag-name-filter cat -- --all
+
+
+----------------------------------------------------------------------------
+git config core.ignorecase false //대소문자 폴더명 구분
+
+git rm -r --cached . //로컬에서 파일들 추적 해제
+
+git add & git commit // 다시 추적하게 하기 및 커밋
+---------------------------------------------------------------------------
+push 한 commit 삭제 법
+
+git log // commit 한 로그 확인
+
+git reset HEAD^ //가장 최근 커밋 삭제
+
+or
+
+git reset --hard "commit ID" //원하는 commit 이후의 commit 삭제
+
+git push -f origin 브랜치명 // 깃허브에 해당 커밋을 삭제
+
