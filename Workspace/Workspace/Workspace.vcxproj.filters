@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="11478_서로_다른_부분_문자열의_개수.cpp">
+    <ClCompile Include="2161_카드1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
