@@ -27,7 +27,7 @@ int main()
 				cout << deq.front() << '\n';
 				deq.pop_front();
 				del++;
-				if (del == M) {
+				if (del == M && !deq.empty()) {
 					rev = 1;
 					del = 0;
 				}
@@ -39,11 +39,11 @@ int main()
 			cnt++;
 		}
 		else{
-			if (cnt % (K + 1) == 0){
-				cout << deq.front() << '\n';
-				deq.pop_front();
+			if (cnt % K == 0){
+				cout << deq.back() << '\n';
+				deq.pop_back();
 				del++;
-				if (del == M) {
+				if (del == M && !deq.empty()) {
 					rev = 0;
 					del = 0;
 				}
@@ -53,7 +53,6 @@ int main()
 				deq.pop_back();
 			}
 			cnt++;
-
 		}
 	}
 }
