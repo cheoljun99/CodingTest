@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="27497_알파벳_블록.cpp">
+    <ClCompile Include="28066_타노스는_요세푸스가_밉다.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
