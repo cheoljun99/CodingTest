@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="29813_최애의_팀원.cpp">
+    <ClCompile Include="26043_식당_메뉴.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
