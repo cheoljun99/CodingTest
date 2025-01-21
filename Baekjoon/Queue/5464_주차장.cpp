@@ -12,18 +12,19 @@ int main()
 
 	cin >> N >> M;
 
-	vector<int> Rs(N);
+	vector<pair<int,int>> Rs(N);
 	vector<int> Wk(M + 1);
 
 	for (int i = 0; i < N; i++) {
-		cin >> Rs[i];
+		Rs[i].first = i + 1;
+		cin >> Rs[i].second;
 	}
-	sort(Rs.begin(), Rs.end(), greater<int>());
+	sort(Rs.begin(), Rs.end(), greater<pair<int,int>>());
 	for (int i = 1; i <= M; i++) {
 		cin >> Wk[i];
 	}
 	int res = 0;
-	queue<tuple<int,int,int>>q;
+	queue<tuple<int,int,pair<int,int>>>q;
 	queue<pair<int, int>>wait;
 	for (int i = 1; i <= M * 2; i++) {
 		int num;
@@ -41,17 +42,15 @@ int main()
 				q.push(q.front());
 				q.pop();
 			}
-			res += get<2>(q.front()) * get<1>(q.front());
+			res += get<2>(q.front()).second * get<1>(q.front());
+			Rs.push_back(get<2>(q.front()));
+			sort(Rs.begin(), Rs.end(), greater<pair<int, int>>());
 			if (!wait.empty()) {
-				q.push({ wait.front().first,wait.front().second,get<2>(q.front()) });
+				q.push({ wait.front().first,wait.front().second,Rs.back()});
+				Rs.pop_back();
 				wait.pop();
 			}
-			else {
-				Rs.push_back(get<2>(q.front()));
-				sort(Rs.begin(), Rs.end(), greater<int>());
-			}
 			q.pop();
-			cout << "gg" << '\n';
 		}
 	}
 	cout << res;
