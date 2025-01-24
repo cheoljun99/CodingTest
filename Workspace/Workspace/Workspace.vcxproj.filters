@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="25497_기술_연계마스터_임스.cpp">
+    <ClCompile Include="12789_도키도키_간식드리미.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
