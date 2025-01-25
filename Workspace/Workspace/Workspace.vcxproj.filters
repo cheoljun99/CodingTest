@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="17952_과제는_끝나지_않아!.cpp">
+    <ClCompile Include="15815_천재_수학자_성필.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
