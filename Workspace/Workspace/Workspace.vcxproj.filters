@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1935_후위_표기식2.cpp">
+    <ClCompile Include="17952_과제는_끝나지_않아!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
