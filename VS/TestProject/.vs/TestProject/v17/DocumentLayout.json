@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cheoljun99\\Desktop\\CodingTest\\TestProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8942F141-BD7A-42A5-B64A-92CD7AD49A69}|TestProject\\TestProject.vcxproj|C:\\Users\\cheoljun99\\Desktop\\CodingTest\\TestProject\\TestProject\\Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8942F141-BD7A-42A5-B64A-92CD7AD49A69}|TestProject\\TestProject.vcxproj|solutionrelative:TestProject\\Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test.cpp",
+              "DocumentMoniker": "C:\\Users\\cheoljun99\\Desktop\\CodingTest\\TestProject\\TestProject\\Test.cpp",
+              "RelativeDocumentMoniker": "TestProject\\Test.cpp",
+              "ToolTip": "C:\\Users\\cheoljun99\\Desktop\\CodingTest\\TestProject\\TestProject\\Test.cpp",
+              "RelativeToolTip": "TestProject\\Test.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-26T11:25:03.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
