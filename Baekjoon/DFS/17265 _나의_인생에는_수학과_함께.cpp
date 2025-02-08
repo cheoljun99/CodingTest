@@ -13,8 +13,8 @@ int max_answer;
 char table[5][5];
 
 
-int dx[2] = {0,1};
-int dy[2] = {1,0};
+int dx[2] = { 0,1 };
+int dy[2] = { 1,0 };
 
 
 void dfs(int x, int y, bool oper_rator_saver, char oper_rator, int cur_distance, int pre_answer) {
@@ -36,31 +36,29 @@ void dfs(int x, int y, bool oper_rator_saver, char oper_rator, int cur_distance,
 	}
 
 	if (min_distance != 0) {
-		if (cur_distance>min_distance) {
+		if (cur_distance > min_distance) {
 			return;
 		}
 	}
 
 
 	for (int i = 0; i < 2; i++) {
-		if (x+dx[i] >= 0 && y+ dy[i] >= 0 && x+dx[i] < N && y+dy[i] < N) {
+		if (x + dx[i] >= 0 && y + dy[i] >= 0 && x + dx[i] < N && y + dy[i] < N) {
 			if (oper_rator_saver == false) {
-				oper_rator_saver = true;
-				dfs(x + dx[i], y + dy[i], oper_rator_saver,table[x + dx[i]][y + dy[i]], cur_distance+1, pre_answer);
-				oper_rator_saver = false;
+				dfs(x + dx[i], y + dy[i], true, table[x + dx[i]][y + dy[i]], cur_distance + 1, pre_answer);
 			}
 			else if (oper_rator_saver == true) {
 
-				if (oper_rator == '+') { 
-					dfs(x + dx[i], y + dy[i], false,oper_rator, cur_distance + 1, pre_answer+(table[x + dx[i]][y + dy[i]] - '0'));
+				if (oper_rator == '+') {
+					dfs(x + dx[i], y + dy[i], false, oper_rator, cur_distance + 1, pre_answer + (table[x + dx[i]][y + dy[i]] - '0'));
 				}
-				else if(oper_rator == '-') {
-					dfs(x + dx[i], y + dy[i], false,oper_rator, cur_distance + 1, pre_answer-(table[x + dx[i]][y + dy[i]] - '0'));
+				else if (oper_rator == '-') {
+					dfs(x + dx[i], y + dy[i], false, oper_rator, cur_distance + 1, pre_answer - (table[x + dx[i]][y + dy[i]] - '0'));
 				}
 				else if (oper_rator == '*') {
-			
-					dfs(x + dx[i], y + dy[i], false,oper_rator, cur_distance + 1, pre_answer *(table[x + dx[i]][y + dy[i]] - '0'));
-				
+
+					dfs(x + dx[i], y + dy[i], false, oper_rator, cur_distance + 1, pre_answer * (table[x + dx[i]][y + dy[i]] - '0'));
+
 				}
 
 			}
@@ -79,14 +77,14 @@ int main() {
 	cin.ignore();//버퍼에서 개행 제거
 
 	for (int i = 0; i < N; i++) {
-		getline(cin,s);
+		getline(cin, s);
 		int k = 0;
 		for (int j = 0; j < N; j++) {
-			table [i][j]=s[k];
+			table[i][j] = s[k];
 			k += 2;
 		}
 	}
 
 	dfs(0, 0, false, 0, 0, table[0][0] - '0');
-	cout << max_answer <<" "<< min_answer;
+	cout << max_answer << " " << min_answer;
 }
