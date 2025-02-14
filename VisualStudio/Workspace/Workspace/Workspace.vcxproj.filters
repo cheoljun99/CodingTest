@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1932_정수_삼각형.cpp">
+    <ClCompile Include="16953_A-B.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
