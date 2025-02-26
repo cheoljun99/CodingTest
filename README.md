@@ -1,8 +1,8 @@
 # CodingTest
 CodingTest
 
-# String Split
-C++로 Split 구현하기 stringstream 사용 - 2025.02.26
+## String Split
+C++로 Split 구현하기 stringstream 사용
 ```
 vector<string> splitString(string& str,char delimeter) {
 
@@ -18,7 +18,7 @@ vector<string> splitString(string& str,char delimeter) {
 }
 ```
 
-# Vetor 원소 Count
+## Vetor 원소 Count
 C++ vector에서 특정 원소 개수 찾기 algorithm의 count(begin, end, value)이용
 
 시간복잡도: O(N)
