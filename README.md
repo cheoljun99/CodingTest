@@ -2,9 +2,8 @@
 
 CodingTest
 
-# String
-
-1. C++로 Split 구현하기 stringstream 사용 - 2025.02.26
+# String Split
+C++로 Split 구현하기 stringstream 사용 - 2025.02.26
 ```
 vector<string> splitString(string& str,char delimeter) {
 
