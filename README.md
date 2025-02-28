@@ -46,7 +46,7 @@ int main(){
  int arr[5] = {6,7,8,9,10};
  int oneCount = count(vec.begin(),vec.end(),1);
  int ACount=count(vec.begin(),vec.end(),'A');
- int sixCount = count(arr,arr+5,2) //배열은 인자값이 포인터ㄴㄴ
+ int sixCount = count(arr,arr+5,2) //배열은 인자값이 포인터
  
 }
 ```
