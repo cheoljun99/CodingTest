@@ -1,18 +1,25 @@
-#include <iostream>
-#include <string>
+#include<bits/stdc++.h>
 
 using namespace std;
 
 int main() {
 	ios::sync_with_stdio(false);
-	cin.tie(0);
-	cout.tie(0);
+	cin.tie(NULL);
 
-	string a, b;
-	while (cin >> a >> b) {
-		int aIdx = 0;
+	string s, t;
+	while (cin >> s >> t) {
+		int sCount = 0;
 		bool isTrue = false;
-		if (b.find(a)!=b.end()) {
+		for (int i = 0; i < t.length(); i++) {
+			if (s[sCount] == t[i]) {
+				sCount++;
+			}
+			if (sCount == s.length()) {
+				isTrue = true;
+				break;
+			}
+		}
+		if (isTrue) {
 			cout << "Yes\n";
 		}
 		else {
@@ -22,3 +29,4 @@ int main() {
 
 
 	return 0;
+}
