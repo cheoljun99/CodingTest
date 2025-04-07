@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="12605_단어순서_뒤집기.cpp">
+    <ClCompile Include="2605_줄_세우기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
