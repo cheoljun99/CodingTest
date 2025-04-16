@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="25640_MBTI.cpp">
+    <ClCompile Include="1259_패린드롬수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
