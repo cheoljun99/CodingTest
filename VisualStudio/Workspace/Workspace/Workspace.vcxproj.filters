@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="27433_팩토리얼_2.cpp">
+    <ClCompile Include="15963_CASIO.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
