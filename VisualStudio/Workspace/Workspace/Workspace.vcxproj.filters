@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2522_별_찍기_12.cpp">
+    <ClCompile Include="10990_별_찍기_15.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
